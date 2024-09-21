@@ -52,7 +52,17 @@ services:
     depends_on:
       - db
       - redis
-
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: rabbitmq
+    ports:
+      - "5672:5672"   # Port for RabbitMQ protocol
+      - "15672:15672" # Port for RabbitMQ management UI
+    environment:
+      RABBITMQ_DEFAULT_USER: guest
+      RABBITMQ_DEFAULT_PASS: guest
+    networks:
+      - rabbitmq_net
 volumes:
   redis_data:
 networks:
