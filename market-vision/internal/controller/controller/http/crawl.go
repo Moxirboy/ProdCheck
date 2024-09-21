@@ -7,6 +7,7 @@ import (
 	"market-vision/internal/controller/dto"
 	"market-vision/internal/service/usecase"
 	"market-vision/pkg/logger"
+	rabbitmq "market-vision/pkg/rabbitMq"
 	"market-vision/prod-business/crawl"
 
 	"github.com/gin-gonic/gin"
@@ -70,8 +71,7 @@ func (h *ProductHandler) GetProductDetails(c *gin.Context) {
 			c.JSON(400, gin.H{"message": "Invalid request"})
 			return
 		}
-		_=Id
-		//TODO: Send notification
+		rabbitmq.Publish(Id+"/"+res.Url,"violation")
 	}
 	c.JSON(200, gin.H{"message": "Success"})
 }
