@@ -1,6 +1,6 @@
 # ProdCheck
 
-**ProdCheck** is an advanced product monitoring and enforcement tool designed to help businesses protect their brand integrity and ensure compliance with online marketplace regulations. Like Trackstreet's system, ProdCheck automates the tracking of product listings, detects violations, and ensures that authorized resellers adhere to brand policies.
+**ProdCheck** is an advanced product monitoring and enforcement tool designed to help businesses protect their brand integrity and ensure compliance with online marketplace regulations. ProdCheck automates the tracking of product listings, detects violations, and ensures that authorized resellers adhere to brand policies.
 
 ## Note
 
