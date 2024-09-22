@@ -33,7 +33,7 @@ services:
       - prod-check
   app:
     build:
-      context: ./docker/dev
+      context: ./crawl-microservice/docker/dev
       dockerfile: Dockerfile
     volumes:
       - .:/app
@@ -56,13 +56,21 @@ services:
     image: rabbitmq:3-management
     container_name: rabbitmq
     ports:
-      - "5672:5672"   # Port for RabbitMQ protocol
-      - "15672:15672" # Port for RabbitMQ management UI
+      - "5672:5672"   
+      - "15672:15672"
     environment:
       RABBITMQ_DEFAULT_USER: guest
       RABBITMQ_DEFAULT_PASS: guest
     networks:
       - rabbitmq_net
+  frontend:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      NODE_ENV: production
+    volumes:
+      - .:/app
 volumes:
   redis_data:
 networks:
