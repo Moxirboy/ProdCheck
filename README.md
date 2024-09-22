@@ -28,7 +28,8 @@ ProdCheck adopts a microservice architecture to ensure scalability, high perform
 5. **Backend API**: A Golang-based API for managing product data, scraping instructions, and integrating third-party services.
 6. **Authorization**: Casbin is used for role-based access control (RBAC). It manages user permissions by enforcing policies defined for different user roles, ensuring that only authorized users can access or modify specific system features.
 7. **Authentication**: Firebase Authentication manages user accounts and session handling, integrating seamlessly with Casbin for secure access control.
-
+7. **Storage**: Firebase firestore it will hold violation SS. And can expose it publicly.
+   
 ### Authorization Workflow (Casbin)
 
 1. **User Roles**: Define different roles such as Admin, Manager, and Viewer within Casbin.
@@ -47,7 +48,7 @@ Casbin provides flexibility and security, allowing fine-grained control over sys
 - **Authentication & Cloud Services**: Firebase
 - **Authorization**: Casbin, JWT
 - **Deployment**: Docker, Kubernetes
-
+- **Storage**: Firebase, Firestore
 ## Prerequisites
 
 Ensure that you have the following installed:
