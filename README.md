@@ -4,7 +4,7 @@
 
 ## Note
 
-Make sure to configure the necessary environment variables in the `.env` file and set up Firebase configuration in the internal configuration engine. Firebase is used for key services within the system, and proper configuration is crucial for the system to function correctly.
+Make sure to configure the necessary environment variables in the `.env` file and set up Firebase configuration in the internal configuration engine. Firebase is used for key services within the system, and proper configuration is crucial for the system to function correctly. Please check wiki too for doc.
 
 ## Key Features
 
