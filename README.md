@@ -2,6 +2,10 @@
 
 ProdCheck is a comprehensive product monitoring and enforcement tool designed to help businesses safeguard their brand integrity and maintain compliance in online marketplaces. Similar to Trackstreet's system, ProdCheck automates the process of tracking product listings, monitoring potential violations, and ensuring that authorized resellers comply with brand policies.
 
+## Note
+
+Make sure to configure the necessary environment variables in the `.env` file and set up Firebase configuration in the internal configuration engine. Firebase is used for key services within the system, and proper configuration is crucial for the system to function correctly.
+
 ## Features
 
 - **Automated Product Monitoring**: Continuously track product listings across multiple online platforms to detect unauthorized sellers, price violations, and counterfeit products.
@@ -29,6 +33,7 @@ Key components include:
 - **Backend**: Golang, PHP, Redis, RabbitMQ/Kafka
 - **Database**: SQLite, Redis for caching
 - **Web Scraping**: Colly (for crawling), chromedp (for HTML cache extraction)
+- **Firebase**: For authentication and cloud services
 - **Deployment**: Docker, Kubernetes
 
 ## Installation
@@ -53,7 +58,11 @@ Key components include:
 
     Fill in the necessary details in the `.env` file.
 
-4. **Build and run the Docker containers**:
+4. **Configure Firebase**:
+
+    Ensure that your Firebase configuration is set up correctly in the internal configuration engine. This includes Firebase credentials, API keys, and any additional services that Firebase provides.
+
+5. **Build and run the Docker containers**:
 
     ```bash
     docker-compose up --build
@@ -61,7 +70,7 @@ Key components include:
 
     This will set up the required services (API, web scraper, etc.) using Docker.
 
-5. **Access the application**:
+6. **Access the application**:
 
     Once the services are running, you can access the UI via:
 
